@@ -1,5 +1,5 @@
 {
-  "name": "@saleor/auth-sdk",
+  "name": "saleor-auth-sdk",
   "version": "1.0.1",
   "description": "Auth SDK for Saleor",
   "sideEffects": false,
@@ -24,25 +24,26 @@
   "dependencies": {
     "@graphql-typed-document-node/core": "^3.2.0",
     "cookie": "^0.6.0",
+    "cookie-universal-nuxt": "^2.2.2",
     "graphql": "^16.8.1"
   },
   "peerDependencies": {
-    "next": "^13.4.4 || ^14.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "urql": "^4.0.3"
+    "@vue/apollo-composable": "^4.0.0-beta.12",
+    "nuxt": "^3.9.0",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
   },
   "peerDependenciesMeta": {
-    "react": {
+    "vue": {
       "optional": true
     },
-    "react-dom": {
+    "vue-router": {
       "optional": true
     },
-    "urql": {
+    "@vue/apollo-composable": {
       "optional": true
     },
-    "next": {
+    "nuxt": {
       "optional": true
     }
   },
@@ -52,32 +53,29 @@
     "@types/debug": "^4.1.12",
     "@types/node": "^20.9.1",
     "@types/node-fetch": "^2.6.9",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
     "@types/uuid": "^9.0.7",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
-    "@vitejs/plugin-react": "^4.2.0",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/apollo-composable": "^4.0.0-beta.12",
     "clean-publish": "^4.2.0",
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-vue": "^9.19.2",
     "jsdom": "^22.1.0",
     "prettier": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "release-it": "^17.0.0",
     "tsup": "^7.3.0",
     "typescript": "^5.2.2",
-    "urql": "^4.0.6",
     "vite": "^5.0.0",
     "vitest": "^0.34.6",
-    "vitest-fetch-mock": "^0.2.2"
+    "vitest-fetch-mock": "^0.2.2",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --cache --fix",
@@ -85,20 +83,20 @@
   },
   "exports": {
     "./package.json": "./package.json",
-    "./react": {
-      "types": "./react/index.d.ts",
-      "import": "./react/index.mjs",
-      "require": "./react/index.js"
+    "./vue": {
+      "types": "./vue/index.d.ts",
+      "import": "./vue/index.mjs",
+      "require": "./vue/index.js"
     },
-    "./next": {
-      "types": "./next/index.d.ts",
-      "import": "./next/index.mjs",
-      "require": "./next/index.js"
+    "./nuxt": {
+      "types": "./nuxt/index.d.ts",
+      "import": "./nuxt/index.mjs",
+      "require": "./nuxt/index.js"
     },
-    "./next/server": {
-      "types": "./next/server.d.ts",
-      "import": "./next/server.mjs",
-      "require": "./next/server.js"
+    "./nuxt/server": {
+      "types": "./nuxt/server.d.ts",
+      "import": "./nuxt/server.mjs",
+      "require": "./nuxt/server.js"
     },
     ".": {
       "types": "./index.d.ts",

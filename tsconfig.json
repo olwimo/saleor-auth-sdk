@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["DOM", "DOM.Iterable", "ES2023"],
-    "jsx": "react-jsx",
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
 
     "module": "ES2022",
     "rootDir": "./",
